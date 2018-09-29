@@ -10,6 +10,10 @@ class Counter extends React.Component {
     dec = () => {
         this.setState({value: this.state.value - 1 })
     }
+    calcColor = () => {
+        const lightColors = ['white', 'yellow']
+        return lightColors.includes(this.props.name) ? 'black' : 'white'
+    }
 
     render () {
         //Same as const name = this.props.name (destructuring)
@@ -19,9 +23,10 @@ class Counter extends React.Component {
 
         return(
             <div
-                style={{
+                style={
+                    {
                     backgroundColor: name,
-                    color: 'white'
+                    color: this.calcColor()
                 }}
             >
                 <h1>{name} counter</h1>
