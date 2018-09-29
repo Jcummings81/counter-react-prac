@@ -12,9 +12,20 @@ class Counter extends React.Component {
     }
 
     render () {
+        //Same as const name = this.props.name (destructuring)
+        const { name } = this.props
+        //Same as const value = this.state
+        const { value } = this.state
+
         return(
-            <div>
-                <h1>{this.state.value}</h1>
+            <div
+                style={{
+                    backgroundColor: name,
+                    color: 'white'
+                }}
+            >
+                <h1>{name} counter</h1>
+                <h1>{value}</h1>
                 <button onClick={this.inc}>+</button>
                 <button onClick={this.dec}>-</button>
             </div>

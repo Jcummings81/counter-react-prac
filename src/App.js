@@ -10,9 +10,9 @@ class App extends Component {
         <header>
         </header>
         <div>
-          <Counter />
-          <Counter />
-          <Counter />
+          <Counter name="red"/>
+          <Counter name="blue"/>
+          <Counter name="purple"/>
         </div>
       </div>
     );
