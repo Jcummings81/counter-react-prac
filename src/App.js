@@ -1,31 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Counter from './Counter'
 
 class App extends Component {
     
-  state = {value: 0, color: 'blue' }
-  
-
-
-  inc = () => {
-      this.setState({value: this.state.value + 1 })
-  }
-
-  dec = () =>  {
-    this.setState({value: this.state.value - 1 })
-  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+        <header>
         </header>
         <div>
-           <p>{this.state.value}</p>
-           <button onClick={this.inc}>+</button>
-           <button onClick={this.dec}>-</button>
+          <Counter />
+          <Counter />
+          <Counter />
         </div>
       </div>
     );
