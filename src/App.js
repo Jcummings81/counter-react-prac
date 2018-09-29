@@ -3,11 +3,18 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {value: 0 }
+    
+  state = {value: 0, color: 'blue' }
+  
+
+
+  inc = () => {
+      this.setState({value: this.state.value + 1 })
   }
 
+  dec = () =>  {
+    this.setState({value: this.state.value - 1 })
+  }
   render() {
     return (
       <div className="App">
