@@ -1,13 +1,10 @@
 import React from 'react'
 import Clock from './Clock'
-import { Button } from 'semantic-ui-react'
 
  
 
 class Counter extends React.Component {
     state = { value: 0 }
-
-    butt = () => <Button color="red" fluid></Button>
 
     inc = () => {
         this.setState({value: this.state.value + 1 })
@@ -38,7 +35,7 @@ class Counter extends React.Component {
                 <h1>{name} counter</h1>
                 <Clock />
                 <h1>{value}</h1>
-                <butt onClick={this.inc}>+</butt>
+                <button onClick={this.inc}>+</button>
                 <button onClick={this.dec}>-</button>
             </div>
         )

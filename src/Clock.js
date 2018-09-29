@@ -23,7 +23,7 @@ class Clock extends React.Component {
                 color: 'black'
             }
         }>
-        (this.state.time.toLocaleDateString)</div>
+        {this.state.time.toLocaleTimeString()}</div>
         )
     }
 }
